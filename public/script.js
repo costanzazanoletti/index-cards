@@ -14,8 +14,7 @@ let cardValues = Array.from({ length: deckSize }, () =>
 
 const getNextValue = () => {
   console.log(`current index ${currentIndex}`);
-  currentIndex < deckSize - 1 ? currentIndex++ : (currentIndex = 0);
-  return cardValues[currentIndex];
+  let result = currentIndex < deckSize - 1 ? cardValues[currentIndex++] : 'End';
 };
 
 const showNextCard = (event) => {
